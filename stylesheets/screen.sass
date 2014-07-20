@@ -1,0 +1,124 @@
+@import "compass/reset"
+
+$bg-grey: #F2F2F2
+$color-inactive-grey: #c6c6c6
+$body-grey: #717171
+
+$color-tab-faded: #CEF1FA
+$color-main: #E83F33
+// $color-main-dark: #33A8D6
+// $color-accent-light: #FFF7A1
+// $color-accent: #FFEA00
+$color-accent: #ADF35A
+$color-selected: #81DB15
+
+
+$color-calendar-highlight: #FF6B34
+
+$color-fitness: #FFEA00
+$color-food: #FF5722
+$color-stress: #8CC34A
+
+
+*
+	-moz-box-sizing:    border-box
+	-webkit-box-sizing: border-box
+	box-sizing:        border-box
+
+body 
+	font-family: 'Roboto', sans-serif
+	color: $body-grey
+	position: relative
+
+body::-webkit-scrollbar   
+	width: 0
+
+.full-width
+	width: 100%
+
+.half-width
+	width: 50%
+
+.shadow-1
+	-moz-box-shadow:    0px 2px 10px 0px #ddd
+	-webkit-box-shadow: 0px 2px 10px 0px #ddd
+	box-shadow:         0px 2px 10px 0px #ddd
+
+.clearfix
+	clear: both
+
+.rounded
+	border-radius: 8px
+
+body
+	background: $bg-grey
+
+header#topbar
+	@extend .shadow-1
+
+section.container
+	padding: 16px
+
+h3
+	font-size: 20px
+h4
+	font-size: 16px
+	
+
+h5
+	font-size: 12px
+	text-transform: uppercase
+	font-weight: 500
+
+
+#app-bar
+	height: 48px	
+	background: $color-main
+	padding-left: 16px
+	#logo-container
+		width: 100px
+		height: 100%
+		background: url(../img/logo.png) center center no-repeat
+		background-size: contain
+		float: left
+	#menu-container
+		width: 150px
+		height: 100%
+		float: right 
+		
+
+
+.content
+	position: relative
+	height: 100%
+	float: left
+	font-size: 24px
+	line-height: 1.2
+	padding: 12px
+	font-weight: 400
+
+.col-3 > .content
+	width: 320px
+
+
+.card
+	width: 100%
+	background: white
+	margin-bottom: 16px
+	font-size: 16px
+	overflow: hidden
+	position: relative
+	@extend .shadow-1
+	@extend .rounded
+	left: 0
+	-webkit-transition: all 1s ease
+	transition: all 1s ease
+
+
+
+
+
+
+
+
+
