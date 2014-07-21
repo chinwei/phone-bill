@@ -1,0 +1,439 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #454545;
+  position: relative;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.shadow-1, .card {
+  -moz-box-shadow: 0px 2px 10px 0px #dddddd;
+  -webkit-box-shadow: 0px 2px 10px 0px #dddddd;
+  box-shadow: 0px 2px 10px 0px #dddddd;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.rounded, .payment a.pay, .card {
+  border-radius: 8px;
+}
+
+.alert {
+  color: #f86133;
+}
+
+.link {
+  font-weight: 300;
+  margin-top: 14px;
+  color: #4698e6;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+section.container {
+  padding: 16px;
+  -webkit-transition: padding 0.8s ease;
+  transition: padding 0.8s ease;
+}
+
+@media (max-width: 860px) {
+  section.container {
+    padding: 0;
+  }
+
+  .card {
+    border-radius: 0;
+  }
+}
+h1 {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.desc {
+  text-align: center;
+}
+.desc span {
+  display: block;
+  line-height: 1.3;
+}
+
+#topbar {
+  margin-bottom: 15px;
+}
+
+#app-bar {
+  height: 48px;
+  background: white;
+  border-bottom: 5px #e83f33 solid;
+  padding-left: 16px;
+  color: #454545;
+  min-width: 840px;
+}
+#app-bar #logo-container {
+  width: 100px;
+  height: 100%;
+  background: url(../img/logo.svg) center center no-repeat;
+  background-size: contain;
+  float: left;
+}
+#app-bar #menu-container {
+  width: 150px;
+  height: 100%;
+  float: right;
+}
+
+.menu {
+  padding: 17px;
+  margin-left: 20px;
+  float: left;
+}
+.menu li {
+  display: inline-block;
+  float: left;
+  color: #333333;
+  margin: 0 30px 0 0;
+  font-size: 14px;
+  color: #777777;
+}
+.menu .active {
+  color: #e83f33;
+}
+
+.menu.right {
+  margin-right: 0;
+  float: right;
+}
+.menu.right li {
+  float: right;
+  margin: 0 0 0 30px;
+}
+
+span.small {
+  font-size: 12px;
+  font-weight: 300px;
+  margin-top: 5px;
+}
+
+.content {
+  position: relative;
+  height: 100%;
+  float: left;
+  font-weight: 400;
+}
+.content > .thumbnail {
+  width: 100%;
+  height: 140px;
+}
+.content.plan > .thumbnail {
+  background: url(../img/plan-thumbnail.svg) center center no-repeat;
+}
+.content.bill > .thumbnail {
+  background: url(../img/bill-thumbnail.svg) center center no-repeat;
+}
+
+.payment {
+  text-align: center;
+}
+.payment span {
+  display: block;
+}
+.payment .label {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.payment .price {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.payment a.pay {
+  padding: 15px 20px;
+  background: #e83f33;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 5px 0;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  max-width: 210px;
+}
+.payment .days-left {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.col-3 > .content {
+  width: 33%;
+}
+
+.card {
+  width: 100%;
+  background: white;
+  margin-bottom: 16px;
+  font-size: 16px;
+  overflow: hidden;
+  position: relative;
+  left: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  padding: 24px;
+}
+
+header {
+  margin-bottom: 40px;
+}
+header .subhead {
+  font-weight: 100;
+  font-size: 18px;
+  margin: 24px 10px 0 0;
+}
+header .notice {
+  width: 50%;
+  display: inline-block;
+  position: relative;
+  left: 30px;
+  min-width: 350px;
+  margin: 10px 0 20px 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+}
+header .notice i.fa {
+  position: absolute;
+  left: -30px;
+}
+
+#billing header h1 {
+  font-weight: 500;
+  font-size: 34px;
+  margin-bottom: 5px;
+}
+
+.pie-wrapper {
+  background-size: contain;
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
+  display: table;
+}
+.pie-wrapper .content-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  top: -10px;
+}
+
+.content.chart {
+  text-align: center;
+}
+.content.chart span {
+  display: block;
+}
+.content.chart .thumbnail {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+.content.chart .used {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.content.chart .remaining {
+  font-size: 20px;
+  font-weight: 500;
+  color: #7a7a7a;
+  margin-bottom: 3px;
+}
+.content.chart .type {
+  font-size: 14px;
+  font-weight: 500;
+  color: #454545;
+}
+.content.chart.phone .thumbnail {
+  background: url(../img/phone-icon.svg) center center no-repeat;
+  background-size: contain;
+}
+.content.chart.sms .thumbnail {
+  background: url(../img/sms-icon.svg) center center no-repeat;
+  background-size: contain;
+}
+.content.chart.data .thumbnail {
+  background: url(../img/data-icon.svg) center center no-repeat;
+  background-size: contain;
+}
+
+.data .pie-wrapper {
+  background: url(../img/chart-alert.svg) center center no-repeat;
+}
+
+.phone .pie-wrapper, .sms .pie-wrapper {
+  background: url(../img/chart-normal.svg) center center no-repeat;
+}
+
+.phone .used, .sms .used {
+  color: #6ccff3;
+}
+
+.data .used {
+  color: #f86133;
+}
+
+.action-bar {
+  clear: both;
+  text-align: right;
+  margin-top: 30px;
+}
+
+.longest-calls {
+  text-align: center;
+}
+.longest-calls span {
+  display: block;
+}
+.longest-calls .date {
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.longest-calls .time {
+  font-size: 50px;
+  font-weight: 700;
+}
+.longest-calls .time-label {
+  font-size: 24px;
+  font-weight: 300;
+}
+.longest-calls .phone-number {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 20px;
+}
+.longest-calls .location {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+#call-history .mask {
+  width: 920px;
+  margin: 0 auto;
+}
+
+.item-wrapper {
+  width: 200px;
+  height: 200px;
+  border: 5px #deff41 solid;
+  border-radius: 100px;
+  display: table;
+  float: left;
+  margin-right: 30px;
+}
+.item-wrapper > .item {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  top: -5px;
+}
