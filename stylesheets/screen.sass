@@ -65,14 +65,37 @@ body
 
 section.container
 	padding: 16px
-	-webkit-transition: padding 0.8s ease
-	transition: padding 0.8s ease
+
+.content-container.col-3 .content
+	transition: 0.8s width cubic-bezier(0.68, -0.55, 0.265, 1.55)	
 
 @media (max-width: 960px)
 	section.container
 		padding: 0
 	.card
 		border-radius: 0
+	.content-container.col-3 .content
+		width: 100%
+		margin-bottom: 30px
+	section.container	
+		-webkit-transition: padding 0.8s ease
+		transition: padding 0.8s ease
+	header 
+		margin-bottom: 0
+		.notice
+			width: 90%
+	.pie-wrapper
+		margin-bottom: 20px
+	#call-history
+		.content-container
+			overflow-x: scroll
+		.content-container::-webkit-scrollbar
+			height: 0
+	#pay-now
+		height: 372px
+
+
+
 h1
 	font-size: 24px
 	font-weight: 300
@@ -147,7 +170,7 @@ span
 
 
 
-span.small
+.small
 	font-size: 12px
 	font-weight: 300px
 	margin-top: 5px
@@ -170,33 +193,43 @@ span.small
 		> .thumbnail
 			background: url(../img/bill-thumbnail.svg) center center no-repeat
 
+
+a.pay
+	padding: 15px 20px
+	background: $color-main
+	color: white
+	font-size: 14px
+	font-weight: 500
+	@extend .rounded
+	text-decoration: none
+	margin: 5px 0
+	display: inline-block
+	text-align: center
+	width: 100%
+	max-width: 210px
+	transition: background-color 0.8s ease
+	&:hover
+		background: $color-main + #222222
+	&.disabled
+		background: #ccc
+
+.label
+	font-size: 18px
+	font-weight: 300
+	margin-bottom: 10px
+
 .payment
 	text-align: center
 	span
 		display: block
-	.label
-		font-size: 18px
-		font-weight: 300
-		margin-bottom: 10px
+	
 	.price
 		font-size: 60px
 		font-weight: 700
 		margin: 0
 		margin-bottom: 10px
 
-	a.pay
-		padding: 15px 20px
-		background: $color-main
-		color: white
-		font-size: 14px
-		font-weight: 500
-		@extend .rounded
-		text-decoration: none
-		margin: 5px 0
-		display: inline-block
-		text-align: center
-		width: 100%
-		max-width: 210px
+
 	.days-left
 		font-size: 18px
 		font-weight: 500
@@ -211,7 +244,7 @@ span.small
 
 
 
-.col-3 > .content
+.col-3 .content
 	width: 33%
 
 
@@ -225,8 +258,8 @@ span.small
 	@extend .shadow-1
 	@extend .rounded
 	left: 0
-	-webkit-transition: all 1s ease
-	transition: all 1s ease
+	// -webkit-transition: all 1s ease
+	// transition: all 1s ease
 	padding: 24px
 
 header
@@ -258,10 +291,50 @@ header
 			margin-bottom: 5px
 
 #pay-now
+	transition: height 1s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+	overflow: hidden
+	height: 185px
+	&.hide	
+		height: 0
+		.mask
+			top: -200px
+	.mask
+		transition: top 1s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+		position: relative
+		top: 0
+#pay-now
 	header
+		margin-top: 40px
 		h1
 			font-size: 24px
 			font-weight: 400
+
+.creditcard
+	display: block
+	margin-top: 5px
+
+.content.input span
+	display: block
+
+.content.pay-now
+	text-align: center
+	a.small
+		display: block	
+
+input[type='text']
+	width: 70%
+	border: none
+	border-bottom: 5px #ccc solid
+	// margin-top: 20px
+	font-size: 28px
+	font-weight: 700
+	color: #333
+	transition: border-color 0.5s ease
+	&:focus
+		border: none
+		border-bottom: 5px $color-main solid
+		outline: none
+
 
 .pie-wrapper
 	
@@ -306,7 +379,6 @@ header
 	&.phone
 		.thumbnail
 			background: url(../img/phone-icon.svg) center center no-repeat
-			background-size: contain
 	&.sms
 		.thumbnail
 			background: url(../img/sms-icon.svg) center center no-repeat
@@ -387,7 +459,12 @@ header
 
 
 
+.pie-wrapper
 
+	&:hover
+		.spinner
+			span em
+				background: $color-normal + #222222	
 
 
 
@@ -400,18 +477,16 @@ header
 	position: relative
 	border-radius: 100%
 	position: relative
+
 	&:after
 		position: absolute
 		content: ""
-		width: 86%
-		height: 86%
+		width: 88%
+		height: 88%
 		border-radius: 100%
 		background: white
-		top: 7%
-		left: 7%
-
-
-
+		top: 6%
+		left: 6%
 
 	span 
 		width: 50%
@@ -419,43 +494,67 @@ header
 		overflow: hidden
 		position: absolute
 		em 
-			background: $color-normal
-
-.chart.alert span em
-	background: $color-alert
-
-
-
-.spinner span:first-child 
-	left: 0
+			background: white
+			border-radius: 999px
+			position: absolute
+			width: 100%
+			height: 100%
+			
 
 
-.spinner span:last-child 
-	left: 50%
+		&:first-child 
+			left: 0
+			em 
+				left: 100%
+				border-top-left-radius: 0
+				border-bottom-left-radius: 0
+				-webkit-transform: rotate(0deg)
+				-webkit-transform-origin: 0 50%
+				transition: -webkit-transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)
 
-
-.spinner span em 
-	border-radius: 999px
-	position: absolute
-	width: 100%
-	height: 100%
-
-
-.spinner span:first-child em 
-	left: 100%
-	border-top-left-radius: 0
-	border-bottom-left-radius: 0
-	-webkit-transform: rotate(60deg)
-	-webkit-transform-origin: 0 50%
-
-
-.spinner span:last-child em 
-	left: -100%
-	border-top-right-radius: 0
-	border-bottom-right-radius: 0
-	-webkit-transform: rotate(180deg)
-	-webkit-transform-origin: 100% 50%
+		&:last-child 
+			left: 50%
+			em 
+				left: -100%
+				border-top-right-radius: 0
+				border-bottom-right-radius: 0
+				-webkit-transform: rotate(0deg)
+				-webkit-transform-origin: 100% 50%
+				transition: -webkit-transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55)
  
 
+.chart.normal 
+	span em
+		background: $color-normal
+		transition: 0.3s background-color ease
+	&:hover 
+		.used
+			color: $color-normal + #111111
+		span em
+			background: $color-normal + #111111
 
+.chart.alert 
+	span em
+		background: $color-alert
+		transition: 0.3s background-color ease
+	&:hover 
+		.used
+			color: $color-alert + #111111
+		span em
+			background: $color-alert + #111111
 
+.phone.chart span
+	&:first-child em	
+		-webkit-transform: rotate(0deg)
+	&:last-child em	
+		-webkit-transform: rotate(120deg)
+.sms.chart span
+	&:first-child em	
+		-webkit-transform: rotate(60deg)
+	&:last-child em	
+		-webkit-transform: rotate(180deg)
+.data.chart span
+	&:first-child em	
+		-webkit-transform: rotate(160deg)
+	&:last-child em	
+		-webkit-transform: rotate(180deg)				

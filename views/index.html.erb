@@ -31,25 +31,33 @@
 			<div class="content payment">
 				<span class="label">Total Outstanding Balance</span>
 				<h1 class="price">$55.70</h1>
-				<a href="#" class="pay">Pay Now</a>
+				<a id="make-payment-btn" class="pay">Make a payment</a>
 				<span class="days-left alert">7 days left to pay</span>
 				<span class="small">Due on 7 July 2014</span>
 			</div>
 
 		</div>
-
-		<div class="content-container pay-now col-3">
-			<header>
-				<h1>Make a payment</h1>
-			</header>
-			<div class="content">
+		<div class="clearfix"></div>
+		<div id="pay-now" class="hide content-container col-3">
+			<div class="mask">
 				
-			</div>
-			<div class="content">
-				
-			</div>
-			<div class="content">
-				
+				<header>
+					<h1>Make a payment</h1>
+				</header>
+				<div class="content">
+					<span>Payment Method</span>
+					<span class="link">edit</span>
+					<span class="creditcard label">Credit Card ending with 1525</span>
+				</div>
+				<div class="content input">
+					<span>Payment amount</span>
+					<input type="text" placeholder="$55.70">
+				</div>
+				<div class="content pay-now">
+					<a href="#" class="pay">Pay Now</a>
+					<a id="cancel-payment-btn" class="small">Cancel payment</a>
+				</div>
+				<div class="clearfix"></div>
 			</div>
 
 		</div>
@@ -65,7 +73,7 @@
 			
 		</header>
 		<div class="content-container col-3">
-			<div class="content phone chart">
+			<div class="content phone normal chart">
 				<div class="pie-wrapper">
 
 					<div class="spinner">
@@ -76,7 +84,7 @@
 
 					<div class="content-wrapper">
 						<div class="thumbnail"></div>
-						<span class="used">202</span>
+						<span class="used">70</span>
 						<span class="remaining">of 300</span>
 						<span class="type">minutes used</span>	
 					</div>
@@ -84,7 +92,7 @@
 				</div>
 				
 			</div>
-			<div class="content sms chart">
+			<div class="content sms normal chart">
 				<div class="pie-wrapper">
 					<div class="spinner">
 					  <span><em></em></span>
@@ -93,8 +101,8 @@
 
 					<div class="content-wrapper">
 						<div class="thumbnail"></div>
-						<span class="used">202</span>
-						<span class="remaining">of 300</span>
+						<span class="used">330</span>
+						<span class="remaining">of 500</span>
 						<span class="type">messages sent</span>	
 					</div>
 					
@@ -172,12 +180,13 @@
 				</div>
 			</div>
 			<div class="clearfix"></div>
-			<div class="action-bar">
-				<span class="action link">View more details</span>
-			</div>
+			
 			
 			
 		</div>
+		<div class="action-bar">
+				<span class="action link">View more details</span>
+			</div>
 	</div>
 
 
