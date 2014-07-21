@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no"/>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/> -->
-    <meta name="viewport" content="width=100%; initial-scale=1; maximum-scale=1; minimum-scale=1; user-scalable=no;" />
+   
     <title></title>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900' rel='stylesheet' type='text/css'>
 
@@ -40,7 +40,7 @@
 
 	<div id="billing" class="card">
 		<header>
-			<h1>Billing for July 2014</h1>
+			<h1>Billing for June 2014</h1>
 			<span class="subhead name">Johnny Appleseed</span>
 			<span class="subhead phone">+1 (412) 123 4321</span>
 		</header>
@@ -67,12 +67,37 @@
 			<div class="content payment">
 				<span class="label">Total Outstanding Balance</span>
 				<h1 class="price">$55.70</h1>
-				<a href="#" class="pay">Pay Now</a>
+				<a id="make-payment-btn" class="pay">Make a payment</a>
 				<span class="days-left alert">7 days left to pay</span>
 				<span class="small">Due on 7 July 2014</span>
 			</div>
 
 		</div>
+		<div class="clearfix"></div>
+		<div id="pay-now" class="hide content-container col-3">
+			<div class="mask">
+				
+				<header>
+					<h1>Make a payment</h1>
+				</header>
+				<div class="content">
+					<span>Payment Method</span>
+					<span class="link">edit</span>
+					<span class="creditcard label">Credit Card ending with 1525</span>
+				</div>
+				<div class="content input">
+					<span>Payment amount</span>
+					<input type="text" placeholder="$55.70">
+				</div>
+				<div class="content pay-now">
+					<a href="#" class="pay">Pay Now</a>
+					<a id="cancel-payment-btn" class="small">Cancel payment</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+
+		</div>
+
 	</div>
 
 	<div id="usage" class="card">
@@ -84,11 +109,18 @@
 			
 		</header>
 		<div class="content-container col-3">
-			<div class="content phone chart">
+			<div class="content phone normal chart">
 				<div class="pie-wrapper">
+
+					<div class="spinner">
+					  <span><em></em></span>
+					  <span><em></em></span>
+					</div>
+
+
 					<div class="content-wrapper">
 						<div class="thumbnail"></div>
-						<span class="used">202</span>
+						<span class="used">70</span>
 						<span class="remaining">of 300</span>
 						<span class="type">minutes used</span>	
 					</div>
@@ -96,20 +128,30 @@
 				</div>
 				
 			</div>
-			<div class="content sms chart">
+			<div class="content sms normal chart">
 				<div class="pie-wrapper">
+					<div class="spinner">
+					  <span><em></em></span>
+					  <span><em></em></span>
+					</div>
+
 					<div class="content-wrapper">
 						<div class="thumbnail"></div>
-						<span class="used">202</span>
-						<span class="remaining">of 300</span>
+						<span class="used">330</span>
+						<span class="remaining">of 500</span>
 						<span class="type">messages sent</span>	
 					</div>
 					
 				</div>
 				
 			</div>
-			<div class="content data chart">
+			<div class="content data chart alert">
 				<div class="pie-wrapper">
+					<div class="spinner">
+					  <span><em></em></span>
+					  <span><em></em></span>
+					</div>
+
 					<div class="content-wrapper">
 						<div class="thumbnail"></div>
 						<span class="used">1.7</span>
@@ -138,48 +180,49 @@
 			<div class="mask">
 				<div class="longest-calls item-wrapper">
 					<div class="item">
-						<span class="date">6 Aug</span>
-						<span class="time">37</span>
+						<span class="date">6 Jun</span>
+						<span class="time">122</span>
 						<span class="time-label">minutes</span>
-						<span class="phone-number">+1 (312) 123-1234</span>
+						<span class="phone-number"><img src="img/outgoing.svg" alt="">+1 (312) 412-6232</span>
 						<span class="location">PA, USA</span>
 					</div>
 				</div>
 				<div class="longest-calls item-wrapper">
 					<div class="item">
-						<span class="date">6 Aug</span>
+						<span class="date">21 Aug</span>
+						<span class="time">89</span>
+						<span class="time-label">minutes</span>
+						<span class="phone-number">+1 (602) 642-7431</span>
+						<span class="location">CA, USA</span>
+					</div>
+				</div>
+				<div class="longest-calls item-wrapper">
+					<div class="item">
+						<span class="date">24 Aug</span>
 						<span class="time">37</span>
 						<span class="time-label">minutes</span>
-						<span class="phone-number">+1 (312) 123-1234</span>
+						<span class="phone-number">+1 (461) 523-6372</span>
 						<span class="location">PA, USA</span>
 					</div>
 				</div>
 				<div class="longest-calls item-wrapper">
 					<div class="item">
-						<span class="date">6 Aug</span>
-						<span class="time">37</span>
+						<span class="date">12 Aug</span>
+						<span class="time">23</span>
 						<span class="time-label">minutes</span>
-						<span class="phone-number">+1 (312) 123-1234</span>
-						<span class="location">PA, USA</span>
-					</div>
-				</div>
-				<div class="longest-calls item-wrapper">
-					<div class="item">
-						<span class="date">6 Aug</span>
-						<span class="time">37</span>
-						<span class="time-label">minutes</span>
-						<span class="phone-number">+1 (312) 123-1234</span>
+						<span class="phone-number"><img src="img/outgoing.svg" alt="">+1 (415) 622-7424</span>
 						<span class="location">PA, USA</span>
 					</div>
 				</div>
 			</div>
 			<div class="clearfix"></div>
-			<div class="action-bar">
-				<span class="action link">View more details</span>
-			</div>
+			
 			
 			
 		</div>
+		<div class="action-bar">
+				<span class="action link">View more details</span>
+			</div>
 	</div>
 
 
