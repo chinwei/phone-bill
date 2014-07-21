@@ -2,19 +2,19 @@
 
 $bg-grey: #F2F2F2
 $color-inactive-grey: #c6c6c6
-$body-grey: #717171
+$body-grey: #454545
 
 $color-tab-faded: #CEF1FA
 $color-main: #E83F33
 // $color-main-dark: #33A8D6
 // $color-accent-light: #FFF7A1
 // $color-accent: #FFEA00
-$color-accent: #ADF35A
+$color-alert: #F86133
 $color-selected: #81DB15
 
 
 $color-calendar-highlight: #FF6B34
-
+$color-link: #4698E6
 $color-fitness: #FFEA00
 $color-food: #FF5722
 $color-stress: #8CC34A
@@ -50,14 +50,28 @@ body::-webkit-scrollbar
 .rounded
 	border-radius: 8px
 
+.alert
+	color: $color-alert	
+
+.link
+	font-weight: 300
+	margin-top: 14px
+	color: $color-link	
+
 body
 	background: $bg-grey
 
-header#topbar
-	@extend .shadow-1
+
 
 section.container
 	padding: 16px
+
+h1
+	font-size: 24px
+	font-weight: 300
+
+
+
 
 h3
 	font-size: 20px
@@ -69,6 +83,17 @@ h5
 	font-size: 12px
 	text-transform: uppercase
 	font-weight: 500
+
+span
+	font-size: 14px
+	font-weight: 500
+
+.desc
+	text-align: center
+	span
+		display: block
+
+
 
 
 #app-bar
@@ -87,6 +112,9 @@ h5
 		float: right 
 		
 
+span.small
+	font-size: 12px
+	font-weight: 300px
 
 .content
 	position: relative
@@ -97,8 +125,58 @@ h5
 	padding: 12px
 	font-weight: 400
 
+	> .thumbnail
+		width: 100%
+		height: 140px
+	
+
+	&.plan
+		> .thumbnail
+			background: url(../img/plan-thumbnail.svg) center center no-repeat
+	&.bill
+		> .thumbnail
+			background: url(../img/bill-thumbnail.svg) center center no-repeat
+
+.payment
+	text-align: center
+	span
+		display: block
+	.label
+		font-size: 18px
+		font-weight: 300
+
+	.price
+		font-size: 60px
+		font-weight: 700
+
+	a.pay
+		padding: 15px 20px
+		background: $color-main
+		color: white
+		font-size: 14px
+		font-weight: 500
+		@extend .rounded
+		text-decoration: none
+		margin: 5px 0
+		display: inline-block
+		text-align: center
+		width: 100%
+		max-width: 210px
+	.days-left
+		font-size: 18px
+		font-weight: 500
+
+
+
+
+
+
+
+
+
+
 .col-3 > .content
-	width: 320px
+	width: 33%
 
 
 .card
@@ -111,14 +189,41 @@ h5
 	@extend .shadow-1
 	@extend .rounded
 	left: 0
-	-webkit-transition: all 1s ease
-	transition: all 1s ease
+	// -webkit-transition: all 1s ease
+	// transition: all 1s ease
+	padding: 24px
+
+header
+	.subhead
+		font-weight: 100
+		font-size: 18px
+		margin: 24px 10px 0 0
+
+#billing 
+	header
+		h1
+			font-weight: 500
+			font-size: 34px
+			margin-bottom: 5px
 
 
 
-
-
-
-
-
+.content.chart
+	text-align: center
+	span
+		display: block
+	.thumbnail
+		width: 50px
+		height: 50px
+		margin: 0 auto
+		background: url(../img/phone-icon.svg) center center no-repeat
+	.used
+		font-size: 30px
+		font-weight: 700
+	.remaining
+		font-size: 20px
+		font-weight: 500
+	.type
+		font-size: 14px
+		font-weight: 500	
 

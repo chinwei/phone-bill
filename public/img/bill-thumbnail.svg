@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="84px" height="96px" viewBox="0 0 84 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.4 (8053) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_31420</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Landscape-2" sketch:type="MSArtboardGroup" transform="translate(-424.000000, -226.000000)" fill="#838383">
+            <g id="icon_31420" sketch:type="MSLayerGroup" transform="translate(424.000000, 226.000000)">
+                <path d="M0,0 L0,96 L60,96 L84,72 L84,0 L0,0 L0,0 Z M60,87 L60,72 L75,72 L60,87 L60,87 Z M79,66 L72.9166667,66 L72.9166667,60 L66.8333333,60 L66.8333333,66 L54.6666667,66 L54.6666667,90 L6,90 L6,6 L79,6 L79,66 L79,66 Z M71,24 L11,24 L11,12 L71,12 L71,24 L71,24 Z M47,42 L11,42 L11,36 L47,36 L47,42 L47,42 Z M66,36 L72,36 L72,42 L66,42 L66,36 L66,36 Z M66,49 L72,49 L72,55 L66,55 L66,49 L66,49 Z M53,55 L11,55 L11,49 L53,49 L53,55 L53,55 Z M35,66 L11,66 L11,60 L35,60 L35,66 L35,66 Z M42,78 L11,78 L11,72 L42,72 L42,78 L42,78 Z" id="Shape" sketch:type="MSShapeGroup"></path>
+            </g>
+        </g>
+    </g>
+</svg>
