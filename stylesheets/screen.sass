@@ -15,7 +15,7 @@ $color-selected: #81DB15
 
 $color-calendar-highlight: #FF6B34
 $color-link: #4698E6
-$color-fitness: #FFEA00
+$color-normal: #6CCFF3
 $color-food: #FF5722
 $color-stress: #8CC34A
 
@@ -65,10 +65,18 @@ body
 
 section.container
 	padding: 16px
+	-webkit-transition: padding 0.8s ease
+	transition: padding 0.8s ease
 
+@media (max-width: 860px)
+	section.container
+		padding: 0
+	.card
+		border-radius: 0
 h1
 	font-size: 24px
 	font-weight: 300
+	margin-bottom: 20px
 
 
 
@@ -92,18 +100,23 @@ span
 	text-align: center
 	span
 		display: block
+		line-height: 1.3
 
 
-
+#topbar
+	margin-bottom: 15px
 
 #app-bar
 	height: 48px	
-	background: $color-main
+	background: white
+	border-bottom: 5px $color-main solid
 	padding-left: 16px
+	color: $body-grey
+	min-width: 840px
 	#logo-container
 		width: 100px
 		height: 100%
-		background: url(../img/logo.png) center center no-repeat
+		background: url(../img/logo.svg) center center no-repeat
 		background-size: contain
 		float: left
 	#menu-container
@@ -111,18 +124,38 @@ span
 		height: 100%
 		float: right 
 		
+.menu
+	padding: 17px
+	margin-left: 20px
+	float: left
+	li
+		display: inline-block
+		float: left
+		color: #333
+		margin: 0 30px 0 0
+		font-size: 14px
+		color: #777
+	.active
+		color: $color-main
+
+.menu.right
+	margin-right: 0
+	float: right
+	li
+		float: right
+		margin: 0 0 0 30px
+
+
 
 span.small
 	font-size: 12px
 	font-weight: 300px
+	margin-top: 5px
 
 .content
 	position: relative
 	height: 100%
 	float: left
-	font-size: 24px
-	line-height: 1.2
-	padding: 12px
 	font-weight: 400
 
 	> .thumbnail
@@ -144,10 +177,12 @@ span.small
 	.label
 		font-size: 18px
 		font-weight: 300
-
+		margin-bottom: 10px
 	.price
 		font-size: 60px
 		font-weight: 700
+		margin: 0
+		margin-bottom: 10px
 
 	a.pay
 		padding: 15px 20px
@@ -165,6 +200,7 @@ span.small
 	.days-left
 		font-size: 18px
 		font-weight: 500
+		margin-top: 10px
 
 
 
@@ -189,15 +225,30 @@ span.small
 	@extend .shadow-1
 	@extend .rounded
 	left: 0
-	// -webkit-transition: all 1s ease
-	// transition: all 1s ease
+	-webkit-transition: all 1s ease
+	transition: all 1s ease
 	padding: 24px
 
 header
+	margin-bottom: 40px
 	.subhead
 		font-weight: 100
 		font-size: 18px
 		margin: 24px 10px 0 0
+	.notice
+		width: 50%
+		display: inline-block
+		position: relative
+		left: 30px
+		min-width: 350px
+		margin: 10px 0 20px 0
+		font-size: 14px
+		font-weight: 300
+		line-height: 16px
+		i.fa
+			position: absolute
+			left: -30px
+
 
 #billing 
 	header
@@ -205,6 +256,20 @@ header
 			font-weight: 500
 			font-size: 34px
 			margin-bottom: 5px
+
+.pie-wrapper
+	
+	background-size: contain
+	width: 240px
+	height: 240px
+	margin: 0 auto
+	display: table
+	.content-wrapper
+		display: table-cell
+		vertical-align: middle
+		position: relative
+		top: -10px
+
 
 
 
@@ -216,14 +281,99 @@ header
 		width: 50px
 		height: 50px
 		margin: 0 auto
-		background: url(../img/phone-icon.svg) center center no-repeat
+		
 	.used
-		font-size: 30px
+		font-size: 40px
 		font-weight: 700
+		margin-bottom: 3px
 	.remaining
 		font-size: 20px
 		font-weight: 500
+		color: #7A7A7A
+		margin-bottom: 3px
 	.type
 		font-size: 14px
-		font-weight: 500	
+		font-weight: 500
+		color: #454545	
+	&.phone
+		.thumbnail
+			background: url(../img/phone-icon.svg) center center no-repeat
+			background-size: contain
+	&.sms
+		.thumbnail
+			background: url(../img/sms-icon.svg) center center no-repeat
+			background-size: contain
+	&.data
+		.thumbnail
+			background: url(../img/data-icon.svg) center center no-repeat
+			background-size: contain				
+
+.data
+	.pie-wrapper
+		background: url(../img/chart-alert.svg) center center no-repeat
+.phone, .sms 
+	.pie-wrapper
+		background: url(../img/chart-normal.svg) center center no-repeat		
+
+.phone, .sms
+	.used
+		color: $color-normal
+.data
+	.used
+		color: $color-alert		
+
+
+.action-bar
+	clear: both
+	text-align: right
+	margin-top: 30px
+
+
+
+
+.longest-calls
+	text-align: center
+	span
+		display: block
+	.date
+		font-size: 14px
+		font-weight: 300
+		margin-bottom: 20px
+	.time
+		font-size: 50px
+		font-weight: 700
+	.time-label
+		font-size: 24px
+		font-weight: 300
+
+	.phone-number
+		font-size: 14px
+		font-weight: 300
+		margin-top: 20px
+	.location
+		font-size: 12px
+		font-weight: 500
+		margin-top: 5px				
+
+#call-history
+	.mask
+		width: 920px
+		margin: 0 auto
+
+
+
+.item-wrapper
+	width: 200px
+	height: 200px
+	border: 5px #DEFF41 solid
+	border-radius: 100px
+	display: table
+	float: left
+	margin-right: 30px
+	> .item
+		display: table-cell
+		vertical-align: middle
+		position: relative
+		top: -5px
+
 
