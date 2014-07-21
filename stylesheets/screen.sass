@@ -68,7 +68,7 @@ section.container
 	-webkit-transition: padding 0.8s ease
 	transition: padding 0.8s ease
 
-@media (max-width: 860px)
+@media (max-width: 960px)
 	section.container
 		padding: 0
 	.card
@@ -257,6 +257,12 @@ header
 			font-size: 34px
 			margin-bottom: 5px
 
+#pay-now
+	header
+		h1
+			font-size: 24px
+			font-weight: 400
+
 .pie-wrapper
 	
 	background-size: contain
@@ -265,11 +271,13 @@ header
 	margin: 0 auto
 	display: table
 	.content-wrapper
-		display: table-cell
-		vertical-align: middle
-		position: relative
-		top: -10px
-
+		margin: auto
+		position: absolute
+		top: 0 
+		left: 0 
+		bottom: 0 
+		right: 0
+		height: 130px
 
 
 
@@ -310,10 +318,10 @@ header
 
 .data
 	.pie-wrapper
-		background: url(../img/chart-alert.svg) center center no-repeat
+		// background: url(../img/chart-alert.svg) center center no-repeat
 .phone, .sms 
 	.pie-wrapper
-		background: url(../img/chart-normal.svg) center center no-repeat		
+		// background: url(../img/chart-normal.svg) center center no-repeat		
 
 .phone, .sms
 	.used
@@ -375,5 +383,79 @@ header
 		vertical-align: middle
 		position: relative
 		top: -5px
+
+
+
+
+
+
+
+
+
+.spinner 
+	width: 240px
+	height: 240px
+	background: #ddd
+	margin: 0 auto
+	position: relative
+	border-radius: 100%
+	position: relative
+	&:after
+		position: absolute
+		content: ""
+		width: 86%
+		height: 86%
+		border-radius: 100%
+		background: white
+		top: 7%
+		left: 7%
+
+
+
+
+	span 
+		width: 50%
+		height: 100%
+		overflow: hidden
+		position: absolute
+		em 
+			background: $color-normal
+
+.chart.alert span em
+	background: $color-alert
+
+
+
+.spinner span:first-child 
+	left: 0
+
+
+.spinner span:last-child 
+	left: 50%
+
+
+.spinner span em 
+	border-radius: 999px
+	position: absolute
+	width: 100%
+	height: 100%
+
+
+.spinner span:first-child em 
+	left: 100%
+	border-top-left-radius: 0
+	border-bottom-left-radius: 0
+	-webkit-transform: rotate(60deg)
+	-webkit-transform-origin: 0 50%
+
+
+.spinner span:last-child em 
+	left: -100%
+	border-top-right-radius: 0
+	border-bottom-right-radius: 0
+	-webkit-transform: rotate(180deg)
+	-webkit-transform-origin: 100% 50%
+ 
+
 
 
