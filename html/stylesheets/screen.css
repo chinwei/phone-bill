@@ -715,6 +715,9 @@ input[type='text']:focus {
   line-height: 1.5;
   margin-bottom: 1em;
 }
+#process.container ul {
+  margin-bottom: 1em;
+}
 #process.container ul li {
   font-size: 14px;
   color: #777777;
