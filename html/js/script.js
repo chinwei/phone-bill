@@ -34,7 +34,7 @@ var paymentComponent = {
 var tocComponent = {
 	init: function() {
 		$('#toc').toc({
-			'highlightOffset': 100,
+			'highlightOffset': 0,
 			'highlightOnScroll': false
 		});
 	}
