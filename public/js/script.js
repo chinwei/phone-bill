@@ -1,6 +1,7 @@
 var App = {
 	init: function(){
 		paymentComponent.init();
+		tocComponent.init();
 	}
 }
 
@@ -30,4 +31,17 @@ var paymentComponent = {
 	}
 }
 
+var tocComponent = {
+	init: function() {
+		$('#toc').toc({
+			'highlightOffset': 100,
+			'highlightOnScroll': false
+		});
+	}
+}
+
+
 App.init();
+
+
+
